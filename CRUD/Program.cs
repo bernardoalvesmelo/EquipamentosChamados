@@ -12,6 +12,8 @@
         public static void Main(string[] args)
         {
             bool continuar = true;
+            int idEquipamentos = 0;
+            int idChamados = 0;
             string[] opcoes = { "0-Sair", "1-Opções Equipamentos", "2-Opções Chamados" };
             while (continuar)
             {
@@ -23,10 +25,10 @@
                         continuar = false;
                         break;
                     case "1":
-                        OpcoesEquipamentos();
+                        OpcoesEquipamentos(ref idEquipamentos);
                         break;
                     case "2":
-                        OpcoesChamados();
+                        OpcoesChamados(ref idChamados);
                         break;
                     default:
                         Console.WriteLine("Opção não encontrada!");
@@ -47,9 +49,8 @@
             Console.Write("Digite a opção desejada: ");
         }
 
-        static void OpcoesEquipamentos()
+        static void OpcoesEquipamentos(ref int id)
         {
-            int id = 0;
             string[] opcoes = { "0-Sair", "1-Cadastrar Equipamento", "2-Mostrar Equipamentos", "3-Atualizar Equipamentos", "4-Remover Equipamento" };
             while (true)
             {
@@ -209,9 +210,9 @@
             }
         }
 
-        static void OpcoesChamados()
+        static void OpcoesChamados(ref int id)
         {
-            int id = 0;
+            id = 0;
             string[] opcoes = { "0-Sair", "1-Cadastrar Chamado", "2-Mostrar Chamados", "3-Atualizar Chamados", "4-Remover Chamado" };
             while (true)
             {
