@@ -212,7 +212,6 @@
 
         static void OpcoesChamados(ref int id)
         {
-            id = 0;
             string[] opcoes = { "0-Sair", "1-Cadastrar Chamado", "2-Mostrar Chamados", "3-Atualizar Chamados", "4-Remover Chamado" };
             while (true)
             {
